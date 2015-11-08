@@ -1,4 +1,4 @@
-# ymodules-loader
+# ymodules-loader [![Build Status](https://travis-ci.org/just-boris/ymodules-loader.svg?branch=master)](https://travis-ci.org/just-boris/ymodules-loader)
 
 > Webpack loader for [ymodules](https://github.com/ymaps/modules) module definitions
 
