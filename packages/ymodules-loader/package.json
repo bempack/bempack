@@ -1,0 +1,19 @@
+{
+  "name": "ymodules-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "pretest": "webpack --config test/webpack.config.js",
+    "test": "node dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.1.2",
+    "eslint": "^1.9.0",
+    "webpack": "^1.12.3",
+    "ym": "^0.1.2"
+  }
+}
