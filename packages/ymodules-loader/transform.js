@@ -2,11 +2,11 @@ module.exports = function(babel) {
     const types = babel.types;
 
     function collectDeps(deps) {
-        if(deps.type !== 'ArrayExpression') {
+        if(!types.isArrayExpression(deps)) {
             return [];
         }
         return deps.elements.filter((dep) => {
-            if(dep.type !== 'StringLiteral') {
+            if(!types.isStringLiteral(dep)) {
                 console.warn('Unable to parse dynamic imports');
                 return false;
             }
@@ -41,7 +41,7 @@ module.exports = function(babel) {
                     this.ymFound = false;
                     this.dependencies = [];
                 },
-                exit(path, parent, scope, file) {
+                exit(path) {
                     if(this.dependencies.length > 0) {
                         this.dependencies = this.dependencies.map((dep) => dep + '/' + dep);
                         path.node.body = this.dependencies.map(addImport).concat(path.node.body);
@@ -54,7 +54,7 @@ module.exports = function(babel) {
             CallExpression: {
                 enter(path) {
                     const callee = path.node.callee;
-                    if(callee.type === 'MemberExpression' && callee.object.name === 'modules') {
+                    if(types.isMemberExpression(callee) && types.isIdentifier(callee.object, {name: 'modules'})) {
                         var methodName = callee.property.name;
                         if(methodName === 'require' || methodName === 'define') {
                             const depArgument = methodName === 'define' ? 1 : 0;
