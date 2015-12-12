@@ -6,8 +6,8 @@ bemdecl-to-fs
 ```javascript
 const bemdeclToFs = require('bemdecl-to-fs');
 
-const bemdecl = [];
-const levels = []; // absolute paths
+const bemdecl = [{block: 'a'}];
+const levels = ['blocks'];
 const techs = ['css', 'js'];
 
 bemdeclToFs(bemdecl, levels, techs)
