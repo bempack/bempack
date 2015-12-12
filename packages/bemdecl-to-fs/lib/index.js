@@ -11,7 +11,17 @@ module.exports = function (bemdecl, _levels, _techs) {
   var levels = utils.stringToArray(_levels);
   var techs = utils.stringToArray(_techs);
 
-  // validate
+  if (!Array.isArray(bemdecl)) {
+    return void Promise.reject('bemdecl should be array');
+  }
+
+  if (levels.length === 0) {
+    return void Promise.reject(new Error('should provide levels'));
+  }
+
+  if (techs.length === 0) {
+    return void Promise.reject(new Error('should provide techs'));
+  }
 
   if (bemdecl.length === 0) {
     return Promise.resolve([]);
