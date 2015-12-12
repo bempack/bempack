@@ -1,0 +1,33 @@
+{
+  "name": "bemdecl-to-fs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bem-naming": "^0.5.1",
+    "globby": "^4.0.0",
+    "glob": "^6.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha --ui tdd test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sullenor/bemdecl-to-fs.git"
+  },
+  "keywords": [
+    "bem"
+  ],
+  "author": "Alexey Litvinov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sullenor/bemdecl-to-fs/issues"
+  },
+  "homepage": "https://github.com/sullenor/bemdecl-to-fs#readme"
+}
