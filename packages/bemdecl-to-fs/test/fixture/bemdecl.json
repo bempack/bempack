@@ -1,10 +1,13 @@
 [
   {
-    "modName": "theme",
-    "modVal": "islands",
-    "block": "page"
+    "block": "c"
   },
   {
-    "block": "header"
+    "block": "b"
+  },
+  {
+    "modName": "m",
+    "modVal": "a",
+    "block": "b"
   }
 ]
