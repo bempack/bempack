@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     context: __dirname,
-    entry: './entry',
+    entry: ['./entry', './blocks/a/a.js', './blocks/b/b.js', './blocks/c/c.js'],
     output: {
         path: './dist',
         filename: 'bundle.js'
