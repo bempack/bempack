@@ -1,0 +1,27 @@
+{
+  "name": "bemdecl-to-fs-loader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bemdecl-to-fs": "^0.0.3",
+    "loader-utils": "^0.2.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sullenor/bemdecl-to-fs-loader.git"
+  },
+  "keywords": [
+    "bem"
+  ],
+  "author": "Alexey Litvinov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sullenor/bemdecl-to-fs-loader/issues"
+  },
+  "homepage": "https://github.com/sullenor/bemdecl-to-fs-loader#readme"
+}
