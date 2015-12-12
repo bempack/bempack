@@ -7,15 +7,15 @@ var bem = new Bem({
 });
 
 /**
+ * {a,b,c}
+ *
  * @param  {string[]} parts
  * @return {string}
  */
-function globify(parts) {
-  if (parts.length === 1) {
-    return parts[0];
-  }
-
-  return '{' + parts.join(',') + '}';
+function buildSet(parts) {
+  return parts.length > 1
+    ? '{' + parts.join(',') + '}'
+    : parts[0];
 }
 
 /**
@@ -103,7 +103,7 @@ function stringToArray(arg) {
   return Array.isArray(arg) ? arg : [arg].filter(Boolean);
 }
 
-exports.globify = globify;
+exports.buildSet = buildSet;
 exports.resolveBlock = resolveBlock;
 exports.resolveBlockMod = resolveBlockMod;
 exports.resolveElem = resolveElem;

@@ -9,5 +9,11 @@
     "modName": "m",
     "modVal": "a",
     "block": "b"
+  },
+  {
+    "block": "fake"
+  },
+  {
+    "block": "a"
   }
 ]
