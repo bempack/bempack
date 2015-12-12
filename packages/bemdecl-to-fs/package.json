@@ -1,6 +1,6 @@
 {
   "name": "bemdecl-to-fs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/index.js",
   "directories": {
@@ -8,8 +8,7 @@
   },
   "dependencies": {
     "bem-naming": "^0.5.1",
-    "globby": "^4.0.0",
-    "glob": "^6.0.1"
+    "globby": "^4.0.0"
   },
   "devDependencies": {
     "mocha": "^2.3.4"

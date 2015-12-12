@@ -1,4 +1,4 @@
-var glob = require('glob');
+var glob = require('globby');
 var path = require('path');
 var utils = require('./utils');
 
@@ -6,16 +6,15 @@ var utils = require('./utils');
  * @param {object[]} bemdecl
  * @param {string|string[]} _levels
  * @param {string|string[]} _techs
- * @param {function} callback
  */
-module.exports = function (bemdecl, _levels, _techs, callback) {
+module.exports = function (bemdecl, _levels, _techs) {
   var levels = utils.stringToArray(_levels);
   var techs = utils.stringToArray(_techs);
 
   // validate
 
   if (bemdecl.length === 0) {
-    return void callback(null, []);
+    return Promise.resolve([]);
   }
 
   var techPattern = utils.globify(techs);
@@ -28,5 +27,5 @@ module.exports = function (bemdecl, _levels, _techs, callback) {
       }));
     }, []);
 
-  glob(utils.globify(files), {realpath: true}, callback);
+  return glob(files);
 };
