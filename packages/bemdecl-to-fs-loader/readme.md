@@ -31,7 +31,7 @@ module.exports = {
 };
 ```
 
-Note that you can provide **extension** and **levels** arguments to the loader, so they will overwrite globals from the `bem` section. For example:
+Note that you can provide **extensions** and **levels** arguments to the loader, so they will overwrite globals from the `bem` section. For example:
 
 ```javascript
 {
