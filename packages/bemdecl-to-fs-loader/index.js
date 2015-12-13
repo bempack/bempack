@@ -22,7 +22,7 @@ module.exports = function (content) {
     ? this.exec(content, this.resourcePath)
     : content; // assume that its a plain object / array
 
-  bemdeclToFs(bemdecl, levels, techs)
+  bemdeclToFs(bemdecl, levels, exts)
     .then(function (files) {
       var source = files.map(function (file) {
         self.addDependency(file);
