@@ -1,16 +1,36 @@
 var bemdeclToFs = require('bemdecl-to-fs');
 var loaderUtils = require('loader-utils');
+var get = require('lodash.get');
+var path = require('path');
 
 /**
  * query:
- * - levels
- * - techs
+ * - levels {string|string[]}
+ * - techs {string|string[]}
  *
  * @param  {string} content
  */
 module.exports = function (content) {
   var callback = this.async();
   var query = loaderUtils.parseQuery(this.query);
+  var self = this;
 
-  bemdeclToFs();
+  var exts = query.extensions || get(this.options, 'bem.extensions');
+  var levels = query.levels || get(this.options, 'bem.levels');
+
+  var bemdecl = typeof content === 'string'
+    ? this.exec(content, this.resourcePath)
+    : content; // assume that its a plain object / array
+
+  bemdeclToFs(bemdecl, levels, techs)
+    .then(function (files) {
+      var source = files.map(function (file) {
+        self.addDependency(file);
+        return 'require(' + loaderUtils.stringifyRequest(self, path.relative(self.context, file)) + ')';
+      })
+      .join('\n');
+
+      callback(null, source);
+    })
+    .catch(callback);
 };

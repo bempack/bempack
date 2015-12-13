@@ -5,7 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "bemdecl-to-fs": "^0.0.3",
-    "loader-utils": "^0.2.12"
+    "loader-utils": "^0.2.12",
+    "lodash.get": "^3.7.0"
   },
   "devDependencies": {},
   "scripts": {
