@@ -1,7 +1,7 @@
 bemjson-loader
 ==============
 
-Bemjson webpack loader. Extracts declarations from the bemjson file and converts then to the commonJs module.
+Bemjson webpack loader. Extracts declarations from the bemjson file and converts them to the commonJs module.
 
 ## Installation
 
