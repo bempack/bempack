@@ -8,7 +8,7 @@ var path = require('path');
  * - levels {string|string[]}
  * - techs {string|string[]}
  *
- * @param  {string} content
+ * @param {string|array} content
  */
 module.exports = function (content) {
   var callback = this.async();
