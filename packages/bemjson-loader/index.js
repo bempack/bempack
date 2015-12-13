@@ -6,6 +6,10 @@ var loaderUtils = require('loader-utils');
  * @return {string}
  */
 module.exports = function (source) {
+  if (this.cacheable) {
+    this.cacheable();
+  }
+  
   var bemjson = this.exec(source);
   var query = loaderUtils.parseQuery(this.query);
   var stringify = typeof query.stringify === 'boolean'
