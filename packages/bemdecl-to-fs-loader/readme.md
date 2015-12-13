@@ -3,6 +3,12 @@ bemdecl-to-fs-loader
 
 Webpack loader wrapper for [bemdecl-to-fs](https://github.com/sullenor/bemdecl-to-fs).
 
+## Installation
+
+```bash
+$ npm i bemdecl-to-fs-loader
+```
+
 ## Usage
 
 Loader accepts javascript data, like array or plain object, or raw module code as a string (`module.exports = [...]`).
