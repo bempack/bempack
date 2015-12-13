@@ -1,0 +1,26 @@
+{
+  "name": "bemjson-loader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sullenor/bemjson-loader.git"
+  },
+  "keywords": [
+    "bem"
+  ],
+  "author": "Alexey Litvinov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sullenor/bemjson-loader/issues"
+  },
+  "homepage": "https://github.com/sullenor/bemjson-loader#readme",
+  "dependencies": {
+    "bemjson-to-decl": "0.0.1",
+    "loader-utils": "^0.2.12"
+  }
+}
