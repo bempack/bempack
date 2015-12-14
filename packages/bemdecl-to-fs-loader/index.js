@@ -11,6 +11,10 @@ var path = require('path');
  * @param {string|array} content
  */
 module.exports = function (content) {
+  if (this.cacheable) {
+    this.cacheable();
+  }
+
   var callback = this.async();
   var query = loaderUtils.parseQuery(this.query);
   var self = this;
