@@ -1,0 +1,28 @@
+{
+  "name": "deps-loader",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sullenor/deps-loader.git"
+  },
+  "keywords": [
+    "bem"
+  ],
+  "author": "Alexey Litvinov, Konstantin Gladkikh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sullenor/deps-loader/issues"
+  },
+  "homepage": "https://github.com/sullenor/deps-loader#readme",
+  "dependencies": {
+    "@bem/deps": "0.0.10",
+    "loader-utils": "^0.2.12",
+    "lodash.get": "^3.7.0",
+    "stream-to-array": "^2.2.0"
+  }
+}
