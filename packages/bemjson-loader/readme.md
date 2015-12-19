@@ -36,7 +36,7 @@ module.exports = {
     loaders: [
       {
         test: /\.bemjson\.js$/i,
-        loader: 'bemdecl-to-fs!bemjson&stringify=false'
+        loader: 'bemdecl-to-fs!bemjson?-stringify'
       }
     ]
   }
