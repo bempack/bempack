@@ -1,13 +1,12 @@
 const assert = require('assert');
 const config = require('./fixture/fixture.config');
-const compile = require('./fixture/helper').compile;
+const convert = require('./fixture/helper').convert;
 
 suite('bemjson-loader', () => {
   test('should inline comment', done => {
-    compile(config)
+    convert(config)
       .then(result => {
-        console.log(result)
-        // assert.ok(result.indexOf('/* inlined comment */') > -1);
+        assert.deepEqual(result, require('./cases/simple/expected'));
         done();
       })
       .catch(done);

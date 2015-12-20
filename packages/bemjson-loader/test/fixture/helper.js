@@ -1,5 +1,6 @@
 const debug = require('debug')('loader');
 const path = require('path');
+const vm = require('vm');
 
 const MemoryFileSystem = require('memory-fs');
 const Webpack = require('webpack');
@@ -39,4 +40,14 @@ function compile(config) {
   });
 };
 
+/**
+ * @param  {object} config
+ * @return {promise}
+ */
+function convert(config) {
+  return compile(config)
+    .then(code => eval(code));
+}
+
 exports.compile = compile;
+exports.convert = convert;

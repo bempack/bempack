@@ -1,0 +1,24 @@
+[
+  {
+    "block": "page"
+  },
+  {
+    "block": "header"
+  },
+  {
+    "block": "body"
+  },
+  {
+    "block": "footer"
+  },
+  {
+    "modName": "sticky",
+    "modVal": true,
+    "block": "footer"
+  },
+  {
+    "modName": "sticky",
+    "modVal": "yes",
+    "block": "footer"
+  }
+]

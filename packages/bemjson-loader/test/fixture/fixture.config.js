@@ -1,7 +1,7 @@
 const path = require('path');
 
 const loader = path.join(__dirname, '../../index.js');
-const source = path.join(__dirname, 'bemjson.js');
+const source = path.join(__dirname, '../cases/simple/source.js');
 const destination = path.join(__dirname, 'index.bundle.js');
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     filename: path.basename(destination),
-    libraryTarget: 'commonjs',
+    libraryTarget: 'commonjs2',
     path: path.dirname(destination),
   },
 
