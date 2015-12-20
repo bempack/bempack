@@ -1,7 +1,7 @@
 const path = require('path');
 
 const loader = path.join(__dirname, '../../index.js');
-const source = path.join(__dirname, 'module.js');
+const source = path.join(__dirname, 'bemjson.js');
 const destination = path.join(__dirname, 'index.bundle.js');
 
 module.exports = {
