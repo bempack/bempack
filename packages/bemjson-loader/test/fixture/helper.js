@@ -46,7 +46,10 @@ function compile(config) {
  */
 function convert(config) {
   return compile(config)
-    .then(code => eval(code));
+    .then(code => {
+      const ctx = vm.createContext({module: module});
+      return vm.runInContext(code, ctx);
+    });
 }
 
 exports.compile = compile;
