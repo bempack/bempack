@@ -1,7 +1,7 @@
 {
   "name": "bemjson-loader",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "Extracts declarations from the bemjson file",
   "main": "index.js",
   "scripts": {
     "test": "mocha --ui tdd test/",
@@ -12,7 +12,9 @@
     "url": "git+https://github.com/sullenor/bemjson-loader.git"
   },
   "keywords": [
-    "bem"
+    "bemjson",
+    "webpack",
+    "loader"
   ],
   "author": "Alexey Litvinov",
   "license": "MIT",
