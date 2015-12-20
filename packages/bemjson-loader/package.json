@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --ui tdd test/",
+    "test:debug": "DEBUG=loader npm test"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,10 @@
   "dependencies": {
     "bemjson-to-decl": "0.0.1",
     "loader-utils": "^0.2.12"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.9"
   }
 }
