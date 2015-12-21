@@ -3,6 +3,12 @@ bemhtml-loader
 
 [Webpack](https://webpack.github.io/) loader for [bemhtml](http://bem.github.io/bem-xjst/) template engine.
 
+## Installation
+
+```bash
+$ npm i bemhtml-loader
+```
+
 ## Usage
 
 [Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
