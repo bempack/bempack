@@ -5,11 +5,14 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "bem-xjst": "^4.2.7"
+    "bem-xjst": "^4.2.7",
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.9"
   },
   "scripts": {
     "build": "echo '' | bem-xjst -o runtime.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "rm -rf dist",
+    "test": "mocha --ui tdd test/"
   },
   "repository": {
     "type": "git",
