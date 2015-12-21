@@ -1,14 +1,8 @@
 {
   "name": "bemhtml-loader",
   "version": "0.0.1",
-  "description": "",
+  "description": "Webpack loader for bemhtml template engine",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "bem-xjst": "^4.2.7",
-    "mocha": "^2.3.4",
-    "webpack": "^1.12.9"
-  },
   "scripts": {
     "build": "echo '' | bem-xjst -o runtime.js",
     "pretest": "rm -rf dist",
@@ -18,10 +12,21 @@
     "type": "git",
     "url": "git+https://github.com/sullenor/bemhtml-loader.git"
   },
+  "keywords": [
+    "bemhtml",
+    "webpack",
+    "loader"
+  ],
   "author": "Alexey Litvinov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sullenor/bemhtml-loader/issues"
   },
-  "homepage": "https://github.com/sullenor/bemhtml-loader#readme"
+  "homepage": "https://github.com/sullenor/bemhtml-loader#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "bem-xjst": "^4.2.7",
+    "mocha": "^2.3.4",
+    "webpack": "^1.12.9"
+  }
 }
