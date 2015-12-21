@@ -8,9 +8,6 @@ module.exports = function (source) {
   this.cacheable();
 
   var corePath = require.resolve('./runtime');
-  return "var bemhtml = require('" + corePath + "');\n"+
-    "\nbemhtml.compile(function () {\n"+
-    source+
-    "});\n"+
-    "\nmodule.exports = bemhtml;\n"
+  return "var bemhtml = require('" + corePath + "');\n\nbemhtml.compile(function () {\n" +
+    source + "\n});\n\nmodule.exports = bemhtml;\n";
 };
