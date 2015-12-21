@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * bemhtml loader
  *
