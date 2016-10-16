@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/sullenor/bemjson-loader#readme",
   "dependencies": {
-    "bemjson-to-decl": "0.0.1",
-    "loader-utils": "^0.2.12"
+    "bemjson-to-decl": "^1.0.1",
+    "loader-utils": "^0.2.16"
   },
   "devDependencies": {
     "debug": "^2.2.0",
     "memory-fs": "^0.3.0",
-    "mocha": "^2.3.4",
-    "webpack": "^1.12.9"
+    "mocha": "^3.1.2",
+    "webpack": "^1.13.2"
   }
 }
