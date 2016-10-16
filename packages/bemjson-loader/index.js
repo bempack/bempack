@@ -14,8 +14,7 @@ var loaderUtils = require('loader-utils');
 module.exports = function (source) {
   this.cacheable();
 
-  var bemjson = this.exec(source);
-  // https://github.com/webpack/loader-utils#parsequery
+  var bemjson = this.exec(source, this.resourcePath);
   var query = loaderUtils.parseQuery(this.query);
   var shouldStringify = typeof query.stringify === 'boolean'
     ? query.stringify
