@@ -12,7 +12,7 @@ var loaderUtils = require('loader-utils');
  * @return {string}
  */
 module.exports = function (source) {
-  this.cacheable();
+  this.cacheable && this.cacheable();
 
   var bemjson = this.exec(source, this.resourcePath);
   var query = loaderUtils.parseQuery(this.query);
