@@ -1,9 +1,9 @@
-const debug = require('debug')('loader');
-const path = require('path');
-const vm = require('vm');
+const debug = require("debug")("loader");
+const path = require("path");
+const vm = require("vm");
 
-const MemoryFileSystem = require('memory-fs');
-const Webpack = require('webpack');
+const MemoryFileSystem = require("memory-fs");
+const Webpack = require("webpack");
 
 /**
  * @param  {object} config
@@ -22,16 +22,16 @@ function compile(config) {
 
       debug(`time ${stats.endTime - stats.startTime}ms`);
 
-      fs.readFile(config.destination, 'utf8', (err, result) => {
+      fs.readFile(config.destination, "utf8", (err, result) => {
         if (!err) {
           return void resolve(result);
         }
 
-        if (err.code === 'ENOENT') {
+        if (err.code === "ENOENT") {
           const file = path.relative(process.cwd(), config.destination);
           const storage = JSON.stringify(fs.meta(process.cwd()), null, 2);
 
-          return void reject(new Error(`no such file ${file}\nin the virtual storage: ${storage}`));
+          return void reject(new Error(`no such file ${file} in the virtual storage:\n${storage}`));
         }
 
         reject(err);
@@ -47,7 +47,7 @@ function compile(config) {
 function convert(config) {
   return compile(config)
     .then(code => {
-      const ctx = vm.createContext({module: module});
+      const ctx = vm.createContext({ module: module });
       return vm.runInContext(code, ctx);
     });
 }
