@@ -1,2 +1,6 @@
+.editorconfig
+.eslintrc.json
 .gitignore
-test/
+.npmignore
+.travis.yml
+test

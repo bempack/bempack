@@ -1,9 +1,11 @@
-const debug = require("debug")("loader");
-const path = require("path");
-const vm = require("vm");
+'use strict';
 
-const MemoryFileSystem = require("memory-fs");
-const Webpack = require("webpack");
+const debug = require('debug')('loader');
+const path = require('path');
+const vm = require('vm');
+
+const MemoryFileSystem = require('memory-fs');
+const Webpack = require('webpack');
 
 /**
  * @param  {object} config
@@ -22,12 +24,12 @@ function compile(config) {
 
       debug(`time ${stats.endTime - stats.startTime}ms`);
 
-      fs.readFile(config.destination, "utf8", (err, result) => {
+      fs.readFile(config.destination, 'utf8', (err, result) => {
         if (!err) {
           return void resolve(result);
         }
 
-        if (err.code === "ENOENT") {
+        if (err.code === 'ENOENT') {
           const file = path.relative(process.cwd(), config.destination);
           const storage = JSON.stringify(fs.meta(process.cwd()), null, 2);
 
@@ -38,7 +40,7 @@ function compile(config) {
       });
     });
   });
-};
+}
 
 /**
  * @param  {object} config

@@ -1,9 +1,10 @@
 {
   "name": "bemjson-loader",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Extracts declarations from the bemjson file",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint test/**/*.js test/*.js *.js",
     "test": "mocha --ui tdd test/",
     "test:debug": "DEBUG=loader npm test"
   },
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "debug": "^2.2.0",
+    "eslint": "^3.8.1",
     "memory-fs": "^0.3.0",
     "mocha": "^3.1.2",
     "webpack": "^1.13.2"

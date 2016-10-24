@@ -1,3 +1,5 @@
+'use strict';
+
 var bemjsonToDecl = require('bemjson-to-decl');
 var loaderUtils = require('loader-utils');
 
