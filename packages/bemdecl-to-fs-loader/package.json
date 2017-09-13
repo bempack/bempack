@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "bemdecl-to-fs": "^0.0.3",
+    "bemdecl-to-fs": "bempack/bemdecl-to-fs#yeti-or.bempack",
     "loader-utils": "^0.2.12",
     "lodash.get": "^3.7.0"
   },
