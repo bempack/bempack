@@ -7,7 +7,7 @@
     "test": "test"
   },
   "dependencies": {
-    "bem-naming": "^0.5.1",
+    "@bem/naming": "^2.0.0-6",
     "glob": "^6.0.1",
     "lodash.compose": "^2.4.1",
     "lodash.flatten": "^3.0.2",

@@ -1,4 +1,4 @@
-var Bem = require('bem-naming');
+var Bem = require('@bem/naming');
 var path = require('path');
 
 var bem = new Bem({
@@ -39,7 +39,7 @@ function resolveBlock(decl) {
  * @return {string}
  */
 function resolveElem(decl) {
-  return path.join(decl.block, bem.elemDelim + decl.elem, bem.stringify(decl));
+  return path.join(decl.block, bem.delims.elem + decl.elem, bem.stringify(decl));
 }
 
 /**
@@ -51,7 +51,7 @@ function resolveElem(decl) {
  * @return {string}
  */
 function resolveBlockMod(decl) {
-  return path.join(decl.block, bem.modDelim + decl.modName, bem.stringify(decl));
+  return path.join(decl.block, bem.delims.mod.name + decl.mod.name, bem.stringify(decl));
 }
 
 /**
@@ -63,7 +63,7 @@ function resolveBlockMod(decl) {
  * @return {string}
  */
 function resolveElemMod(decl) {
-  return path.join(decl.block, bem.elemDelim + decl.elem, bem.modDelim + decl.modName, bem.stringify(decl));
+  return path.join(decl.block, bem.delims.elem + decl.elem, bem.delims.mod.name + decl.mod.name, bem.stringify(decl));
 }
 
 
@@ -76,19 +76,22 @@ function resolveElemMod(decl) {
  * @return {string}
  */
 function resolveDecl(decl) {
-  if (bem.isElemMod(decl)) {
+
+  var entity = bem.parse(bem.stringify(decl));
+
+  if (entity.type === 'elemMod') {
     return resolveElemMod(decl);
   }
 
-  if (bem.isBlockMod(decl)) {
+  if (entity.type === 'blockMod') {
     return resolveBlockMod(decl);
   }
 
-  if (bem.isElem(decl)) {
+  if (entity.type === 'elem') {
     return resolveElem(decl);
   }
 
-  if (bem.isBlock(decl)) {
+  if (entity.type === 'block') {
     return resolveBlock(decl);
   }
 
