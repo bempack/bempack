@@ -1,19 +1,14 @@
-var bemDeps = require('@bem/deps');
-var toArray = require('stream-to-array');
+const bemDeps = require('@bem/deps');
 
-var loadPromise;
 
-function scanDepsFiles(levels) {
-  return toArray(bemDeps.load({ levels: levels }));
-}
+module.exports = function (declaration, levels) {
 
-module.exports = function (declaration, levels, extenstion) {
-  if (!loadPromise) {
-    loadPromise = scanDepsFiles(levels)
-  }
+  // TODO: cache graph
+  const graph = bemDeps.load({ levels: levels }).then(bemDeps.buildGraph)
 
-  return loadPromise.then(function (relations) {
-    var result = bemDeps.resolve(declaration, relations, {tech: extenstion});
-    return result.entities;
-  });
+  return graph
+      .then(graph => graph.dependenciesOf(declaration))
+      .then(function(res) {
+          return res.map(cell => cell.entity);
+      });
 };

@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/sullenor/deps-loader#readme",
   "dependencies": {
-    "@bem/deps": "0.0.10",
+    "@bem/deps": "^0.2.0",
     "loader-utils": "^0.2.12",
     "lodash.get": "^3.7.0",
     "stream-to-array": "^2.2.0"
