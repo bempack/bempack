@@ -1,0 +1,9 @@
+{
+  "eslintConfig": {
+    "extends": "@sullenor/eslint-config"
+  },
+  "devDependencies": {
+    "@sullenor/eslint-config": "^1.1.0",
+    "lerna": "^2.1.2"
+  }
+}
