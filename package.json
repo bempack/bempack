@@ -5,5 +5,8 @@
   "devDependencies": {
     "@sullenor/eslint-config": "^1.1.0",
     "lerna": "^2.1.2"
+  },
+  "scripts": {
+    "test": "lerna run test"
   }
 }
